@@ -1,0 +1,281 @@
+/* Be optimized for screen widths: mobile, 600px, 1240px */
+
+@import url(https://fonts.googleapis.com/css?family=Sacramento|Waiting+for+the+Sunrise);
+@import url(https://fonts.googleapis.com/css?family=Poppins:600,300&subset=latin,devanagari);
+
+body{
+	text-align: center;
+	color: white;
+	font-family: 'Poppins';
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	width: 100%;
+	background-color: pink;
+	margin: 0;
+}
+
+header {
+	background-color: pink;
+	font-size: 1.4em;
+	width: 100%;
+}
+
+/* This is all for the nav manu. */
+.space {
+	border:none;
+	height: 36px;
+	color: pink;
+	margin-bottom: 12px;
+}
+
+nav {
+	display: flex;
+	position:fixed;
+	margin: auto;
+	width: 100%;
+	background-color: white;
+	opacity: 0.6;
+	color: black;
+	font-size: 1em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+ul {
+	list-style-type: none;
+	flex-grow: 1;
+	font-size: 1em;
+	padding-left: 0;
+}
+
+nav ul li{
+	display: inline;
+	margin: auto;
+	width: 100%;
+	padding-right:10px; 
+	padding-left:10px;
+}
+
+li a:hover{
+	font-weight: bold;
+}
+/* Nav menu stuff ends here. */
+
+
+/* This is for the sectioned contents of the page. */
+.section{
+	margin: none;
+	padding-top: 140px;
+	padding-bottom: 140px;
+	font-size: 30px;
+}
+
+h1{
+	font-family: 'Sacramento';
+	font-size: 3em;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+h2{
+	font-family: 'Sacramento';
+	font-size: 2em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+/* Here is the introductory section. It will remain a block element, taking up the entire width of the screen even if expanded. */
+
+.balletfit{
+	background-image: url('photos/ballerina.jpg');
+	background-size: cover;
+}
+
+.title{
+	display: block;
+	font-size: 1.5em;
+	font-family:'Sacramento';
+	padding-bottom: 0.5em;
+	padding-top:0.5em;
+}
+
+.welcome{
+	font-style: italic;
+	font-size: 0.7em; 
+}
+
+/* This is for the Calendar section. */
+.schedules{
+	background-image: url('photos/thirdposition.jpg');
+	background-size: cover;
+}
+
+/* This is for the rates section. */
+.rates{
+	background-image: url('photos/pointeshoes.jpeg');
+	background-size: cover;
+}
+
+/* This is for the contact section. */
+.join{
+	background-image: url('photos/balletbarre.jpg');
+	background-size: cover;
+}
+
+
+/* Pretty pink buttons that become transparent when hovered over. */
+
+button {
+	padding: 8px 20px;
+	font-size: 20px;
+	background-color: pink;
+	color: white;
+	display: block;
+	margin: auto;
+	border: none;
+	opacity: 0.6;
+	transition: all 0.2s ease 0.5s;
+}
+
+a:link{
+	text-decoration: none;
+	color: inherit;
+}
+
+a:visited{
+	text-decoration: none;
+	color: inherit;
+}
+
+.address:hover{
+	text-decoration: underline;
+}
+
+button:hover{
+	 opacity: 1;
+}
+
+/* For the contacts page */
+.contactpage{
+	background-image: url('photos/ballerina.jpg');
+	padding-bottom: 3em;
+	background-attachment: fixed;
+}
+
+.contact{
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+
+/* for the rates page*/
+.ratespage{
+	background-image: url('photos/balletbarre.jpg'); 
+	background-attachment: fixed;
+	padding-bottom: 3em;
+}
+
+.prices{
+	display: block;
+	padding-top: 3em;
+	padding-bottom: 3em;
+	line-height: 1.5em;
+}
+
+/* For the schedules page */
+
+.schedulespage{
+	background-image: url('photos/pointeshoes.jpeg');
+	background-attachment: fixed;
+	padding-bottom: 3em;
+}
+
+.class{
+	line-height: 2em;
+}
+
+.level{
+	text-align: left;
+	display: center;
+	width: 40%;
+	margin: auto;
+	padding-bottom: 4em;
+}
+
+footer{
+	padding-bottom: 1.5em;
+	padding-top: 1.5em;
+	line-height: 2em;
+}
+/* medium format starts here */
+
+
+
+@media all and (min-width: 600px) and (max-width: 1140px) {
+
+.schedules{
+	text-align: left;
+	margin-left: 0;
+	padding-left: 3em;
+}
+
+.schedules button{
+	margin-left: 0;
+}
+
+.rates{
+	text-align: right;
+	margin-right: 0;
+	padding-right: 3em;
+}
+.rates button{
+	margin-right: 0;
+}
+
+.prices{
+	padding-top: 5em;
+	padding-bottom: 5em;
+}
+
+.join{
+	text-align: left;
+	margin-left: 0;
+	padding-left: 3em;
+}
+.join button{
+	margin-left: 0;
+}
+}
+
+/* Large format starts here. */
+
+@media all and (min-width: 1140px) {
+
+.title{
+	font-size: 2em;
+}
+
+.content {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.schedules{
+	flex-grow: 2;
+}
+
+.rates{
+	flex-grow: 1;
+	min-width: 200px;
+}
+
+.prices{
+	padding-top: 5em;
+	padding-bottom: 5em;
+}
+
+.join{
+	flex-grow: 2;
+}
+}
